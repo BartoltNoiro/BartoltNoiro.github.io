@@ -46,7 +46,6 @@
               background-color: #A8DADC;
             }
 
-            
 
             .or{
               margin-left: 10%;
@@ -63,27 +62,22 @@
               padding-bottom: 80px;
             }
             
-            /* Sticky Footer Classes */
 
-html,
-body {
-  height: 100%;
-}
+            html,body {
+              height: 100%;
+            }
 
-#page-content {
-  flex: 1 0 auto;
-}
+            #page-content {
+              flex: 1 0 auto;
+            }
 
-#sticky-footer {
-  flex-shrink: none;
-}
+            #sticky-footer {
+              flex-shrink: none;
+            }
 
-/* Other Classes for Page Styling */
-
-body {
-  background: #457B9D;
-  
-}
+            body {
+              background: #457B9D;
+            }
 
           </style>
     </head>
@@ -97,38 +91,21 @@ body {
             </div>
 
             <div class = "name">Raphael Torres</div>
-
-            <!--<a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>    -->
-          
             <div class="others" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                  <p class="nav-link" href="#" id="tt">Home <span class="sr-only">(current)</span></p>
+                  <a class="nav-link" href="#" id="home_nav">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
+                  <a class="nav-link" href="#" id="ed_nav">Educations</a>
                 </li>
-                <!--<li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
-                </li>  -->
                 <li class="nav-item">
-                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                  <a class="nav-link" href="#" id="org_nav">Organizations</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" id="works_nav">Works</a>
                 </li>
               </ul>
-
-
-              
             </div>
           </nav>
           
@@ -157,10 +134,10 @@ body {
           </div>
           <!--end carousel-->
 
-            <!--INTRO-->
-            <div class="intro">
-            <h3>Short Introduction</h3>
-<p class="a-intro" id="firebase-intro">  <!--where data for Intro go in-->
+          <!--INTRO-->
+          <div class="intro">
+          <h3 id="intro">Short Introduction</h3>
+          <p class="a-intro" id="firebase-intro">  <!--where data for Intro go in-->
   
             <!--<figure class="figure"><img class="rounded img-fluid figure-img" src="highschool.jpg" alt="This is my face.." style="width: 320px;" style="height: 180px;">
                 <figcaption class="figure-caption">Lorem ipsum dolor</figcaption>
@@ -169,7 +146,7 @@ body {
             
             <!--Educations-->
           <div class="post-body">
-            <h4>Educations</h4>  
+            <h4 id="ed_head">Educations</h4>  
             <div class="row">
                 <div class="col-md-6">
                     <figure class="figure"><img class="rounded img-fluid figure-img" src="dlsu.jpg" alt="DLSU">
@@ -182,7 +159,7 @@ body {
             </div>
             
             <!--Organizations-->
-            <h4>Organizations</h4>
+            <h4 id="org_head">Organizations</h4>
             <p>Before the Quarantine, the main org that I was in was batchgov CATCH2T21. I was in documents and logistics, handling papers and such. </p>
             <div class="row"> 
                 <div class="col">
@@ -196,20 +173,12 @@ body {
             </div>  
 
             <!--Works-->
-            <h4>Works</h4>
+            <h4 id="works_head">Works</h4>
             <ul id="workwork"></ul>
             <figure class="figure"><img class="rounded img-fluid figure-img" src="witcher.jpg" alt="A generic square placeholder image with rounded corners in a figure.">
               <figcaption class="figure-caption">joke lang i'm not a developer of witcher...</figcaption>
           </figure>
         </div>
-
-
-          <div class="intro">
-            <h3>Short Introduction</h3>
-            <p>Heluu, My name is Raph, and welcome to my world! I'm a student from DLSU undertaking the course BS-IT. What I usually do in my free time is play Valorant, watch anime or play some single-player games. I recently just finished Violet Evergarden and Kaguya-sama and both of them were amazing in their own way. Hunter x Hunter is one of my favorite anime I would say. 
-              <span id="long">LONGADOG</span></p>
-          </div>
-          
         </div>
       </main>
 
@@ -232,12 +201,29 @@ body {
 
 <!--JS PARTS-->
 <script>
-  //for the scroll
-  $("#tt").click(function () {
-    console.log("loser");
-    var target = $("#long");
+  //for the scroll 
+  $("#home_nav").click(function () {
+    var target = $("#intro");
     $("html, body").animate( 
-      { scrollTop: target.offset().top -2000}, 'slow'); 
+      { scrollTop: target.offset().top -580}, 'slow'); 
+  });
+
+  $("#ed_nav").click(function () {
+    var target = $("#ed_head");
+    $("html, body").animate( 
+      { scrollTop: target.offset().top -150}, 'slow'); 
+  });
+
+  $("#org_nav").click(function () {
+    var target = $("#org_head");
+    $("html, body").animate( 
+      { scrollTop: target.offset().top -100}, 'slow'); 
+  });
+
+  $("#works_nav").click(function () {
+    var target = $("#works_head");
+    $("html, body").animate( 
+      { scrollTop: target.offset().top -90}, 'slow'); 
   });
 
 
