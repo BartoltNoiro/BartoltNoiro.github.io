@@ -11,6 +11,8 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>  
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@600&family=Lato&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
           <style>
             .mepic > .mp4a{
                 width:100px;
@@ -24,7 +26,7 @@
                 }
               
             .name{
-                font-family: poppins;
+                font-family: 'Lato', sans-serif;
                 font-weight: 500;
 
                 margin-right: 30px;
@@ -123,16 +125,16 @@
             <div class="others" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="#" id="home_nav">Home</a>
+                  <a class="nav-link" href="#" id="home_nav" style="font-family: 'Lato', sans-serif;">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#" id="ed_nav">Educations</a>
+                  <a class="nav-link" href="#" id="ed_nav" style="font-family: 'Lato', sans-serif;">Educations</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#" id="org_nav">Organizations</a>
+                  <a class="nav-link" href="#" id="org_nav" style="font-family: 'Lato', sans-serif;">Organizations</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#" id="works_nav">Works</a>
+                  <a class="nav-link" href="#" id="works_nav" style="font-family: 'Lato', sans-serif;">Works</a>
                 </li>
               </ul>
             </div>
@@ -165,17 +167,14 @@
 
             <!--INTRO--> 
             <div class="intro">
-            <h3 id="intro">Short Introduction</h3>
-<p class="a-intro" id="firebase-intro">  <!--where data for Intro go in-->
+            <h3 id="intro" style="font-family: 'Baloo Tamma 2', cursive;">Short Introduction</h3>
+<p class="a-intro" id="firebase-intro" style="font-family: 'Open Sans', sans-serif;">  <!--where data for Intro go in-->
   
-            <!--<figure class="figure"><img class="rounded img-fluid figure-img" src="highschool.jpg" alt="This is my face.." style="width: 320px;" style="height: 180px;">
-                <figcaption class="figure-caption">Lorem ipsum dolor</figcaption>
-            </figure>  not sure if i need it-->
           </div>
             
             <!--Educations-->
           <div class="post-body">
-            <h4 id="ed_head">Educations</h4>  
+            <h4 id="ed_head" style="font-family: 'Baloo Tamma 2', cursive;">Educations</h4>  
             
             <div class="row">
                 <div class="col-md-6">
@@ -190,17 +189,16 @@
                       <input type ="text" name="school" placeholder="School name">
                       <input type ="text" name="year_start" placeholder="Year start">
                       <input type ="text" name="year_end" placeholder="Year end">
-                      <!--<input type ="button" name="add_edu" id="add_edu" value="Add Education"> -->
                       <button type="submit" class="btn btn-info">Add Education</button>  
                     </form>
                   
-                  <ul id="educate"></ul> <!--where data for Educations go in-->
+                  <ul id="educate" style="font-family: 'Open Sans', sans-serif;"></ul> <!--where data for Educations go in-->
                 </div>
             </div>
             
             <!--Organizations-->
-            <h4 id="org_head">Organizations</h4>
-            <p>Before the Quarantine, the main org that I was in was batchgov CATCH2T21. I was in documents and logistics, handling papers and such. </p>
+            <h4 id="org_head" style="font-family: 'Baloo Tamma 2', cursive;">Organizations</h4>
+            <p style="font-family: 'Lato', sans-serif;">Before the Quarantine, the main org that I was in was batchgov CATCH2T21. I was in documents and logistics, handling papers and such. </p>
             <div class="row"> 
                 <div class="col">
                    <form id="add_organization">   <!--adding organization -->
@@ -210,7 +208,7 @@
                     <input type ="text" name="year_end" placeholder="Year end">
                     <button type="submit" class="btn btn-info">Add Organization</button>
                   </form>
-                  <ul id="orgs"></ul> <!--where data for Organizations go in-->
+                  <ul id="orgs" style="font-family: 'Open Sans', sans-serif;"></ul> <!--where data for Organizations go in-->
                 </div>
                 <div class="col-md-6">
                     <figure class="figure"><img class="rounded img-fluid figure-img" src="CATCH2T21_post_stamp.PNG" alt="CATCH2T21 logo" style="width: 180px;" style="height: 180px;">
@@ -220,14 +218,14 @@
             </div>  
 
             <!--Works-->
-            <h4 id="works_head">Works</h4>
+            <h4 id="works_head" style="font-family: 'Baloo Tamma 2', cursive;">Works</h4>
             <form id="add_work">   <!--adding works -->
               <input type ="text" name="lab" placeholder="Programming Language">
               <input type ="text" name="name" placeholder="Name of Work">
               <input type ="text" name="year_end" placeholder="Year of Release">
               <button type="submit" class="btn btn-info">Add Works</button>
             </form>
-            <ul id="workwork"></ul>
+            <ul id="workwork" style="font-family: 'Open Sans', sans-serif;"></ul>
             <figure class="figure"><img class="rounded img-fluid figure-img" src="witcher.jpg" alt="A generic square placeholder image with rounded corners in a figure.">
               <figcaption class="figure-caption">joke lang I'm not a developer of witcher...</figcaption>
           </figure>
@@ -241,7 +239,7 @@
       <body class="d-flex flex-column">
         <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
           <div class="container text-center">
-            <p class="lead text-white-50">Contact Links</p>
+            <p class="lead text-white-50" style="font-family: 'Baloo Tamma 2', cursive;">Contact Links</p>
             <small><a href="https://twitter.com/BartoltNoiro"><img id = "twitter" src="twitter.png" alt="Twitter" width="30px" ></a></small>
             <small><a href="https://www.linkedin.com/in/raphael-torres-695a5a1b4/"><img id = "linkedin" src="linkedin.png" alt="linkedin" width="30px" ></a></small>
             <small><a href="https://github.com/BartoltNoiro"><img id = "github" src="github.png" alt="Github" width="30px" ></a></small>
